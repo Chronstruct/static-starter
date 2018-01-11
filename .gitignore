@@ -1,0 +1,7 @@
+.DS_Store
+.tern-port
+
+.idea/
+
+node_modules/
+public/
