@@ -110,9 +110,7 @@ module.exports = function (env = {}) {
 
       new webpack.ProvidePlugin({
         // Needed for ejs loader
-        _: 'lodash',
-          // temporary
-          css: ['linaria', 'css']
+        _: 'lodash'
       }),
 
       new ExtractTextPlugin({
