@@ -3,7 +3,7 @@ import { css } from 'linaria'
 
 import { Provider } from 'mobx-react'
 import React from 'react'
-import mobx from 'mobx'
+import * as mobx from 'mobx'
 // import { injectGlobal } from 'emotion'
 
 import AppOverlay from 'stores/AppOverlay'
@@ -66,8 +66,6 @@ export default class App extends React.Component {
       <Provider {...stores}>
         <col
             fit
-            start
-
         >
           {/* <AppBar /> */}
           {/* <TabBar /> */}
