@@ -3,6 +3,8 @@
 // Preset ordering is reversed (last to first).
 {
   "plugins": [
+    "object-styles-to-template",
+
     "chronstruct-primitives",
 
     // able to use `class` instead of `className` and `for` instead of `htmlFor`

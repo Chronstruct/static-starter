@@ -39,14 +39,14 @@ const center = css`
   justify-content: center;
 `
 
-const BOX = css`
+const view = css`
   height: 200px;
   width: 400px;
   backgroundColor: red;
 `
 
-const BOX_UPDATED = css`
-  composes: ${BOX};
+const view_UPDATED = css`
+  composes: ${view};
   backgroundColor: green;
 `
 */
@@ -89,6 +89,9 @@ export default class Home extends React.Component {
   render() {
     const grow = 1
     const another = 0;
+    const blue = 'blue'
+    const PHONE = '@media screen and (min-width: 600px)'
+    const height = 30
 
     return (
       <col
@@ -171,118 +174,129 @@ export default class Home extends React.Component {
 
         <view
           as='nav'
-          width='300px'
-          height='30px'
-          margin='20px'
-          css={`
-            background-color: purple;
-          `}
+          width={300}
+          height={{
+            '': 30,
+            600: 400,
+          }}
+          margin={20}
+          style={{
+            backgroundColor: {
+              '': 'purple',
+              600: 'blue',
+              ':hover': 'green',
+            }
+          }}
         />
 
-        {/*<div className={this.state.isUpdated ? BOX_UPDATED : BOX} />*/}
-
         <view
-          height='200px'
-          width='400px'
+          height={200}
+          width={400}
           // backgroundColor: var(--main-bg-color);
-          css={`background-color: ${t ? 'yellow' : 'blue'};`}
+          style={{
+            backgroundColor: t ? 'yellow' : 'blue'
+          }}
           // css={`background-color: ${this.state.isUpdated ? 'yellow' : 'blue'};`}
             // css={`background-color: ${COLOR}`}
         />
 
-        <space size='40px' />
+        <space size={40} />
 
         <row
-          height='200px'
-          width='400px'
+          height={200}
+          width={400}
         >
           <view
             grow
-            css={`
-              background-color: red;
-            `}
+            style={{
+              backgroundColor: 'red'
+            }}
           />
           <view
             grow
-            // css={`
-            //   background-color: green;
-            // `}
+            style={{
+              backgroundColor: 'green'
+            }}
           />
-          <space size='20px' />
+          <space size={20} />
           <view
             grow
-            // css={`
-            //   background-color: blue;
-            // `}
+            style={{
+              backgroundColor: blue
+            }}
           />
         </row>
 
-        <space size='40px' />
+        <space size={40} />
 
-        <flex
+        <view
           // direction={this.state.isUpdated ? 'column' : 'row'}
-          height='200px'
-          width='400px'
+          height={200}
+          width={400}
         >
           <view
             grow
-            css={`
-              background-color: red;
-            `}
+            style={{
+              backgroundColor: 'red'
+            }}
           />
           <view
             grow
-            css={`
-              background-color: green;
-            `}
+            style={{
+              backgroundColor: 'green'
+            }}
           />
           <view
             grow
-            css={`
-              background-color: blue;
-            `}
+            style={{
+              backgroundColor: 'blue'
+            }}
           />
-        </flex>
+        </view>
 
-        <text size='20px'>
+        <text size={20}>
           Home
         </text>
 
         <Link to='other'>Other</Link>
 
-        <text
-          size='16px'
+        <view
+          as="button"
+          padding={16}
           onClick={this.handleOpenFadeOverlay}
-          css={`
-            padding: 16px;
-            border: 1px solid #111;
-          `}
+          //_events={{
+            //onClick: this.handleOpenFadeOverlay
+          //}}
+          //_style={{border: '1px solid #111'}}
+          style={{border: '1px solid #111'}}
         >
-          Open Fade Overlay
-        </text>
+          <text size='16px'>
+            Open Fade Overlay
+          </text>
+        </view>
 
-        <text
-          size='16px'
+        <view
+          as="button"
+          padding={16}
           onClick={this.handleOpenModal}
-          css={`
-            padding: 16px;
-            border: 1px solid #111;
-          `}
+          style={{border: '1px solid #111'}}
         >
+        <text size={16} uppercase >
           Open Overlay Light Outer
         </text>
+        </view>
 
-        <text
-          size='16px'
+        <view
+          as="button"
+          padding={16}
           onClick={this.handleOpenModalDark}
-          css={`
-            padding: 16px;
-            border: 1px solid #111;
-          `}
+          style={{border: '1px solid #111'}}
         >
+          <text size={16} bold>
           Open Modal Dark Outer
         </text>
-      </col>
+        </view>
+             </col>
     )
   }
 }

@@ -41,13 +41,13 @@ export default class CenteredOverlay extends React.PureComponent {
             right={'50px'}
             bottom={'50px'}
             left={'50px'}
-            style={{
+            inlineStyle={{
               transform: this.state.isVisible ? 'translateY(0)' : 'translateY(100vh)',
             }}
-            css={`
-              transition: transform 300ms ease-in-out;
-              background-color: red;
-            `}
+            style={{
+              transition: 'transform 300ms ease-in-out',
+              backgroundColor: 'red',
+            }}
           >
             <text>Oh HAI!</text>
           </view>

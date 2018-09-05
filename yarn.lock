@@ -685,6 +685,10 @@ babel-plugin-minify-type-constructors@^0.1.2:
   dependencies:
     babel-helper-is-void-0 "^0.1.1"
 
+babel-plugin-object-styles-to-template@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/babel-plugin-object-styles-to-template/-/babel-plugin-object-styles-to-template-0.1.2.tgz#59aefe65da0eb8d5bd94143190bce9e27e785c3a"
+
 babel-plugin-react-html-attrs@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-react-html-attrs/-/babel-plugin-react-html-attrs-2.1.0.tgz#ec92006bca1d07e07d27823afae86dac33fabad5"
@@ -1781,9 +1785,9 @@ chokidar@^2.0.0:
   optionalDependencies:
     fsevents "^1.0.0"
 
-chronstruct-primitives@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/chronstruct-primitives/-/chronstruct-primitives-0.0.3.tgz#0392e822a89eb2e6c314211268c49a593f7fe3b0"
+chronstruct-primitives@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/chronstruct-primitives/-/chronstruct-primitives-0.1.0.tgz#1f2415f9b059831f47ecbf4e10b3362de06cc921"
   dependencies:
     jest "^22.0.4"
 

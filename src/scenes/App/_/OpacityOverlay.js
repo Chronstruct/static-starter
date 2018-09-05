@@ -28,15 +28,15 @@ export default class OpacityOverlay extends React.Component {
         right={0}
         bottom={0}
         left={0}
-        style={{
+        inlineStyle={{
           backgroundColor: backgroundColor,
           opacity: isVisible ? opacity : 0,
           overflowY: isVisible && 'hidden',
           pointerEvents: isVisible ? 'auto' : 'none',
         }}
-        css={`
-          transition: opacity 200ms ease-out;
-        `}
+        style={{
+          transition: 'opacity 200ms ease-out'
+        }}
       />
     )
   }
