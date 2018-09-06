@@ -41,13 +41,13 @@ export default class FullOverlay extends React.PureComponent {
             right={'0px'}
             bottom={'0px'}
             left={'0px'}
-            style={{
+            inlineStyle={{
               opacity: this.state.isVisible ? 1 : 0,
             }}
-            css={`
-              transition: opacity 1000ms ease-in-out;
-              background-color: red;
-            `}
+            style={{
+              transition: 'opacity 1000ms ease-in-out',
+              backgroundColor: 'red',
+            }}
           >
             <text>Oh HAI!</text>
           </view>
