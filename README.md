@@ -5,10 +5,10 @@ A starter repo for a static site to be hosted on something like S3,  Github Page
 ### Up and Running
 
 ```shell
-$ git clone git@github.com:chronstruct/starter-static-site.git <YOUR_REPO_NAME>
+$ git clone git@github.com:Chronstruct/static-starter.git <YOUR_REPO_NAME>
 $ cd <YOUR_REPO_NAME>
 $ git remote set-url origin <YOUR_NEWLY_CREATED_GIT_REPO_URL>
-$ git remote add upstream git@github.com:chronstruct/starter-static-site.git #for merging future updates
+$ git remote add upstream git@github.com:Chronstruct/static-starter.git #for merging future updates
 $ npm install
 $ npm start
 $ open http://localhost:8080
