@@ -3,9 +3,12 @@
 // Preset ordering is reversed (last to first).
 {
   "plugins": [
+
     "object-styles-to-template",
 
-    "chronstruct-primitives",
+    ["chronstruct-primitives", {
+        "autoImport": true
+    }],
 
     // able to use `class` instead of `className` and `for` instead of `htmlFor`
     "react-html-attrs",
@@ -40,7 +43,7 @@
         "transform-react-jsx-source",
       ],
       "presets": [
-        "linaria/babel"
+         "linaria/babel"
       ]
     },
     "production": {

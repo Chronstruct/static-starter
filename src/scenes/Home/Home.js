@@ -2,7 +2,7 @@ import { bind } from 'decko'
 import { inject, observer } from 'mobx-react'
 import Link from 'react-router/lib/Link'
 import React from 'react'
-import { css } from 'linaria'
+// import { css } from 'linaria'
 import CenteredOverlay from './_/CenteredOverlay'
 import FullOverlay from './_/FullOverlay'
 

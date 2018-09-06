@@ -1,7 +1,7 @@
 import { bind } from 'decko'
 import { inject, observer } from 'mobx-react'
 import React from 'react'
-import { css } from 'linaria'
+// import { css } from 'linaria'
 
 @inject('AppOverlay')
 @observer
