@@ -43,9 +43,10 @@ __Please consult the [React Playbook](https://github.com/kylpo/react-playbook)__
 ├── /src                       # Your site-specific source code of the application
 │   ├── /scenes/                # Components that are handled by a Navigator. Same as pages, views, etc for the app.
 │   |   ├── /App/               # Root scene
-│   ├── /shared/                # Shared components used in 2+ scenes
+│   ├── /shared/                
+│   |   ├── /components/        # Shared components used in 2+ scenes
+│   |   ├── /logic/             # **Optional** Util/Helper js functions that are app and/or model aware
 │   ├── /stores/                # **Optional** Responsible for you app state. Houses MobX actions and observables
-│   ├── /utils/                 # **Optional** Helper js functions that are app and/or model aware
 │   └── /entry.js               # Entry point for static-site-generator and client-side react-router
 |
 ├── /lib                        # Your non-site-specific Components and functions
