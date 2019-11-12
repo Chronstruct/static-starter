@@ -1,59 +1,154 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- The above 3 meta tags *must* come first in the head, according to https://github.com/joshbuchea/HEAD; any other head content must come *after* these tags -->
     <title><%= data.title %></title>
     <style>
-      /* box-sizing reset */
-      *, *:before, *:after {
-        box-sizing: inherit;
-      }
-      html {
-        height: 100%;
-        box-sizing: border-box;
-      }
-
       /* anti-aliasing */
-      body {
+      /* body {
         height: 100%;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-      }
+      } */
       body.disableScroll {
         overflow: hidden;
         -webkit-overflow-scrolling: auto;
       }
 
-      #root {
-        height: 100%;
+      /* Box sizing rules */
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+      html {
+        box-sizing: border-box;
+      }
+
+      /* Remove default padding */
+      ul[class],
+      ol[class] {
+        padding: 0;
+      }
+
+      /* Remove default margin */
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      p,
+      ul[class],
+      ol[class],
+      li,
+      figure,
+      figcaption,
+      blockquote,
+      dl,
+      dd {
+        margin: 0;
+      }
+
+      /* Set core body defaults */
+      body {
+        min-height: 100vh;
+        scroll-behavior: smooth;
+        text-rendering: optimizeSpeed;
+      }
+
+      /* Remove list styles on ul, ol elements with a class attribute */
+      ul[class],
+      ol[class] {
+        list-style: none;
+      }
+
+      /* Make images easier to work with */
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      /* Inherit fonts for inputs and buttons */
+      input,
+      button,
+      textarea,
+      select {
+        font: inherit;
+      }
+
+      /**
+      * Use the default user interface font in all browsers (opinionated).
+      */
+      html {
+        font-family: system-ui, /* macOS 10.11-10.12 */ -apple-system,
+          /* Windows 6+ */ "Segoe UI", /* Android 4+ */ "Roboto",
+          /* Ubuntu 10.10+ */ "Ubuntu", /* Gnome 3+ */ "Cantarell",
+          /* KDE Plasma 5+ */ "Noto Sans", /* fallback */ sans-serif,
+          /* macOS emoji */ "Apple Color Emoji",
+          /* Windows emoji */ "Segoe UI Emoji",
+          /* Windows emoji */ "Segoe UI Symbol",
+          /* Linux emoji */ "Noto Color Emoji";
+      }
+
+      /**
+      * Use the default monospace user interface font in all browsers (opinionated).
+      */
+      code,
+      kbd,
+      samp,
+      pre {
+        font-family:
+        /* macOS 10.10+ */ "Menlo",
+          /* Windows 6+ */ "Consolas", /* Android 4+ */ "Roboto Mono",
+          /* Ubuntu 10.10+ */ "Ubuntu Monospace",
+          /* KDE Plasma 5+ */ "Noto Mono", /* KDE Plasma 4+ */ "Oxygen Mono",
+          /* Linux/OpenOffice fallback */ "Liberation Mono",
+          /* fallback */ monospace, /* macOS emoji */ "Apple Color Emoji",
+          /* Windows emoji */ "Segoe UI Emoji",
+          /* Windows emoji */ "Segoe UI Symbol",
+          /* Linux emoji */ "Noto Color Emoji";
+      }
+
+      /* Remove all animations and transitions for people that prefer not to see them */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
       }
     </style>
 
     <% if (data.externalStyleSheet) { %>
-     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <% } %> <% if (data.css) { %>
+    <style>
+      <%= data.css %>
+    </style>
     <% } %>
-
-    <% if (data.css) { %>
-      <style><%= data.css %></style>
-    <% } %>
-
   </head>
   <body>
     <div id="root">
-      <% if (data.html) { %>
-        <%= data.html %>
-      <% } %>
+      <% if (data.html) { %> <%= data.html %> <% } %>
     </div>
 
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js" defer async></script>
+    <script
+      src="https://cdn.polyfill.io/v2/polyfill.min.js"
+      defer
+      async
+    ></script>
     <script>
       window._styleIds = <%= data.styleIds || '[]' %>
     </script>
     <% data.js && data.js.forEach(function(file){ %>
-        <script src="<%= file %>?t=<%= new Date().getTime() %>" charset="utf-8"></script>
+    <script
+      src="<%= file %>?t=<%= new Date().getTime() %>"
+      charset="utf-8"
+    ></script>
     <% }); %>
   </body>
 </html>

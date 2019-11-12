@@ -77,5 +77,9 @@ $ git merge upstream/master
 ### Recommended libs for taking this further
 Again, consult the [Playbook](https://github.com/kylpo/react-playbook/tree/master/libs)
 
+### Useful resources
+- [A Modern CSS Reset \- Andy Bell](https://hankchizljaw.com/wrote/a-modern-css-reset/)
+- [csstools/sanitize\.css: A best\-practices CSS foundation](https://github.com/csstools/sanitize.css)
+
 ### Support
 Tweet [@kylpo](https://twitter.com/kylpo)
