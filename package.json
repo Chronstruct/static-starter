@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "postinstall": "patch-package",
     "precommit": "yarn run lint",
     "prepush": "yarn run lint",
     "flow": "flow",
@@ -57,6 +58,9 @@
     "html-webpack-plugin": "^2.29.0",
     "husky": "^0.14.3",
     "local-url-qrcode": "^1.1.0",
+    "patch-package": "^6.2.2",
+    "postinstall-postinstall": "^2.1.0",
+    "prettier": "2.0.5",
     "react-hot-loader": "3.0.0-beta.6",
     "rimraf": "^2.6.1",
     "serve": "10",
