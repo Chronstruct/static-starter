@@ -46,7 +46,7 @@
     "css-loader": "^0.28.4",
     "duplicate-package-checker-webpack-plugin": "^1.2.5",
     "ejs-loader": "^0.3.0",
-    "eslint": "^3.19.0",
+    "eslint": "^4.18.2",
     "eslint-config-constelation": "^1.2.0",
     "eslint-plugin-auto-import": "^0.0.4",
     "eslint-plugin-react": "snowypowers/eslint-plugin-react.git#max-props-per-line-fix",
